@@ -1,5 +1,7 @@
 # chartable
 
+__Work in progress.__
+
 A ruby port of [chartable](https://github.com/jxnblk/chartable).
 No js, no network calls, just svg.
 
