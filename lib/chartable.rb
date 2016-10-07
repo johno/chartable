@@ -12,7 +12,7 @@ module Chartable
         width="#{opts[:width]}"
         height="#{opts[:height]}"
         fill="currentcolor">
-          #{bars(data, opts)}
+        #{bars(data, opts).join}
       </svg>
     HTML
     .html_safe
@@ -20,15 +20,17 @@ module Chartable
 
   def self.bars(data, opts)
     data.map do |bar|
-      "<path fill=\"currentcolor\" d=\"#{bar_path(bar, opts)}\" />"
-    end.join('')
+      <<-HTML
+        <path fill="currentcolor" d="#{bar_path(bar, opts)}" />
+      HTML
+    end
   end
 
   def self.bar_path(bar, opts)
     height = (bar[:y] * opts[:height]) / 50
-    width = 30
     chart_offset = opts[:bar_width] / 2
     x_offset = opts[:bar_width] * 1.5 * bar[:x]
+    width = 30
 
     "M #{chart_offset + x_offset} #{opts[:height]} v#{-height} h#{width} v#{height}z"
   end
