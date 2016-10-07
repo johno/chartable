@@ -43,11 +43,53 @@
         viewBox="0 0 300 150"
         width="300"
         height="150"
-        fill="currentcolor">
-                <path fill="currentcolor" d="M 23.0 150 v-60 h30 v60z" />
-        <path fill="currentcolor" d="M 92.0 150 v-120 h30 v120z" />
-        <path fill="currentcolor" d="M 161.0 150 v-150 h30 v150z" />
-        <path fill="currentcolor" d="M 230.0 150 v-75 h30 v75z" />
+        fill="currentcolor"
+        style="border-bottom: none; border-left: none">
+                <path fill="currentcolor" d="M 23.0 150 v-60 h46 v60z" />
+        <path fill="currentcolor" d="M 92.0 150 v-120 h46 v120z" />
+        <path fill="currentcolor" d="M 161.0 150 v-150 h46 v150z" />
+        <path fill="currentcolor" d="M 230.0 150 v-75 h46 v75z" />
+
+      </svg>
+
+    </div>
+    <h4>X Axis</h4>
+    <p class="f3 lh-copy">
+      You can specify an x axis with the <code>x_axis</code>.
+      It's an inline styled border so you can give it a value like <code>'thin solid #ddd'</code>.
+    </p>
+    <pre class="pa3 bg-near-white">Chartable.bar(data, x_axis: 'thin solid #ddd')</pre>
+    <div class="tc pa3">
+            <svg
+        viewBox="0 0 300 150"
+        width="300"
+        height="150"
+        fill="currentcolor"
+        style="border-bottom: thin solid #ddd; border-left: none">
+                <path fill="currentcolor" d="M 23.0 150 v-60 h46 v60z" />
+        <path fill="currentcolor" d="M 92.0 150 v-120 h46 v120z" />
+        <path fill="currentcolor" d="M 161.0 150 v-150 h46 v150z" />
+        <path fill="currentcolor" d="M 230.0 150 v-75 h46 v75z" />
+
+      </svg>
+
+    </div>
+    <h4>Y Axis</h4>
+    <p class="f3 lh-copy">
+      Similarly to the <code>x_axis</code> option, you can also specify a <code>y_axis</code>.
+    </p>
+    <pre class="pa3 bg-near-white">Chartable.bar(data, y_axis: 'thin solid #ddd')</pre>
+    <div class="tc pa3">
+            <svg
+        viewBox="0 0 300 150"
+        width="300"
+        height="150"
+        fill="currentcolor"
+        style="border-bottom: none; border-left: thin solid #ddd">
+                <path fill="currentcolor" d="M 23.0 150 v-60 h46 v60z" />
+        <path fill="currentcolor" d="M 92.0 150 v-120 h46 v120z" />
+        <path fill="currentcolor" d="M 161.0 150 v-150 h46 v150z" />
+        <path fill="currentcolor" d="M 230.0 150 v-75 h46 v75z" />
 
       </svg>
 

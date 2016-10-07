@@ -11,7 +11,8 @@ module Chartable
         viewBox="0 0 #{opts[:width]} #{opts[:height]}"
         width="#{opts[:width]}"
         height="#{opts[:height]}"
-        fill="currentcolor">
+        fill="currentcolor"
+        style="border-bottom: #{opts[:x_axis] || :none}; border-left: #{opts[:y_axis] || :none}">
         #{bars(data, opts).join}
       </svg>
     HTML
@@ -29,8 +30,7 @@ module Chartable
     height = (bar[:y] * opts[:height]) / 50
     chart_offset = opts[:bar_width] / 2
     x_offset = opts[:bar_width] * 1.5 * bar[:x]
-    width = 30
 
-    "M #{chart_offset + x_offset} #{opts[:height]} v#{-height} h#{width} v#{height}z"
+    "M #{chart_offset + x_offset} #{opts[:height]} v#{-height} h#{opts[:bar_width]} v#{height}z"
   end
 end

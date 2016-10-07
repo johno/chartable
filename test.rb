@@ -1,5 +1,7 @@
 require './lib/chartable'
 
+data = [{x: 0, y: 20}, { x: 1, y: 40 }, { x: 2, y: 50 }, { x: 3, y: 25 }]
+
 File.open('index.html', 'w') do |f|
   f.write(<<-HTML
 <!DOCTYPE html>
@@ -43,7 +45,24 @@ File.open('index.html', 'w') do |f|
     </p>
     <pre class="pa3 bg-near-white">Chartable.bar(data, width: 300, height: 150)</pre>
     <div class="tc pa3">
-      #{Chartable.bar([{x: 0, y: 20}, { x: 1, y: 40 }, { x: 2, y: 50 }, { x: 3, y: 25 }])}
+      #{Chartable.bar(data)}
+    </div>
+    <h4>X Axis</h4>
+    <p class="f3 lh-copy">
+      You can specify an x axis with the <code>x_axis</code>.
+      It's an inline styled border so you can give it a value like <code>'thin solid #ddd'</code>.
+    </p>
+    <pre class="pa3 bg-near-white">Chartable.bar(data, x_axis: 'thin solid #ddd')</pre>
+    <div class="tc pa3">
+      #{Chartable.bar(data, x_axis: 'thin solid #ddd')}
+    </div>
+    <h4>Y Axis</h4>
+    <p class="f3 lh-copy">
+      Similarly to the <code>x_axis</code> option, you can also specify a <code>y_axis</code>.
+    </p>
+    <pre class="pa3 bg-near-white">Chartable.bar(data, y_axis: 'thin solid #ddd')</pre>
+    <div class="tc pa3">
+      #{Chartable.bar(data, y_axis: 'thin solid #ddd')}
     </div>
   </div>
 </div>
