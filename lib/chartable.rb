@@ -15,7 +15,6 @@ module Chartable
         #{bars(data, opts).join}
       </svg>
     HTML
-    .html_safe
   end
 
   def self.bars(data, opts)
