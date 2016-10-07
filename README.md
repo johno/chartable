@@ -23,23 +23,14 @@ Or install it yourself as
 
 ##### Chartable.bar
 
-```rb
-Chartable.bar(data)
+```erb
+<%= Chartable.bar(data, { height: 300, width: 800 }) %>
 ```
 
 ###### Options
 
 - `height`
 - `width`
-- `bar_color`
-- `axis_color`
-- `font_size`
-
-##### Chartable.pie
-
-```rb
-Chartable.pie(data)
-```
 
 ## License
 
