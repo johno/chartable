@@ -2,6 +2,8 @@
 
 __Work in progress.__
 
+See it in action here: <http://johnotander.com/chartable/>
+
 A ruby port of [chartable](https://github.com/jxnblk/chartable).
 No js, no network calls, just svg.
 
